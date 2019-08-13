@@ -38,8 +38,8 @@ function FindProxyForURL(url, host)
 	];
 
 	for (i = 0; i < ips_to_proxy.length; i++) {
-		//if (isInNet(resolved_host, ips_to_proxy[i][0], ips_to_proxy[i][1])) { return proxy; }
-		if ( shExpMatch(resolved_host, ips_to_proxy[i][0]) ) { return proxy; }
+		if (isInNet(resolved_host, ips_to_proxy[i][0], ips_to_proxy[i][1])) { return proxy; }
+		//if ( shExpMatch(resolved_host, ips_to_proxy[i][0]) ) { return proxy; }
 	}
 
 
