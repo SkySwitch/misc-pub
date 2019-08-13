@@ -31,6 +31,10 @@ function FindProxyForURL(url, host)
 	/* Proxy By IP */
 	ips_to_proxy = [ 
 		['50.59.195.170', '255.255.255.255'],	//Heathrow Office
+		['70.42.44.0', '255.255.255.0'],	//NYJ Colo
+		['75.98.50.0', '255.255.255.0'],	//DAL Colo
+		['199.21.224.0', '255.255.255.224'],	//MIN Colo
+		['216.24.144.0', '255.255.255.0']	//LAS Colo
 	];
 
 	for (i = 0; i < ips_to_proxy.length; i++) {
