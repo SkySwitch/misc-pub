@@ -14,7 +14,7 @@ function FindProxyForURL(url, host)
 	domains_to_proxy = [
 		'dialtoen.com',
 		'whitelabelvoip.net',
-		'dashmanager.com,
+		'dashmanager.com',
 		'skyswitch.com',
 		'mixnetworks.com',
 		'mixnetworks.net',
