@@ -6,7 +6,7 @@ function dnsDomainIsOrUnder(host, other)
 function FindProxyForURL(url, host) 
 {	
 	// Your proxy server name and port
-	var proxy = "PROXY 18.207.91.110:3128;";
+	var proxy = "PROXY 23.20.121.238:3128;";
 	var resolved_host = dnsResolve(host);
 
 
