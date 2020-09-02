@@ -12,6 +12,7 @@ function FindProxyForURL(url, host)
 
 	/* Proxy By Domain */
 	domains_to_proxy = [
+		'sendgrid.com',
 		'dialtoen.com',
 		'whitelabelvoip.net',
 		'dashmanager.com',
