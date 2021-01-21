@@ -12,17 +12,13 @@ function FindProxyForURL(url, host)
 
 	/* Proxy By Domain */
 	domains_to_proxy = [
+		'reachuc.com',
 		'sendgrid.com',
 		'dialtoen.com',
-		'whitelabelvoip.net',
 		'dashmanager.com',
 		'skyswitch.com',
-		'mixnetworks.com',
-		'mixnetworks.net',
 		'ipfax.net',
-		'instant-fax.com',
-		'recording-nj.syntelsolutions.com',
-		'recording1-tpa.elementvoip.com'
+		'instant-fax.com'
         ];
 
 	for (i = 0; i < domains_to_proxy.length; i++) {
