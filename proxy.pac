@@ -18,7 +18,8 @@ function FindProxyForURL(url, host)
 		'dashmanager.com',
 		'skyswitch.com',
 		'ipfax.net',
-		'instant-fax.com'
+		'instant-fax.com',
+		'sipcapturer.com'
         ];
 
 	for (i = 0; i < domains_to_proxy.length; i++) {
