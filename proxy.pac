@@ -16,6 +16,7 @@ function FindProxyForURL(url, host)
 		'sendgrid.com',
 		'dialtoen.com',
 		'dashmanager.com',
+		'dashmanager.io',
 		'skyswitch.com',
 		'ipfax.net',
 		'instant-fax.com',
