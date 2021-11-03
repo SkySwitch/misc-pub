@@ -20,7 +20,8 @@ function FindProxyForURL(url, host)
 		'skyswitch.com',
 		'ipfax.net',
 		'instant-fax.com',
-		'iconectiv.com'
+		'iconectiv.com',
+		'app.sendgrid.com'
         ];
 
 	for (i = 0; i < domains_to_proxy.length; i++) {
