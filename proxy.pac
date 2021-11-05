@@ -10,7 +10,8 @@ function FindProxyForURL(url, host)
 	var resolved_host = dnsResolve(host);
 
 	host_overrides = [
-		'webrtc.reachuc.com'
+		'webrtc.reachuc.com',
+		'webis.reachuc.com'
 		// "*.cpe.mixnetworks.net"
 	];
 	
