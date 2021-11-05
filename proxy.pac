@@ -10,6 +10,7 @@ function FindProxyForURL(url, host)
 	var resolved_host = dnsResolve(host);
 
 	host_overrides = [
+		//ReachUC Mac App does not properly use proxy credentials which breaks the app
 		'contacts.reachuc.com',
 		'api.reachuc.com',
 		'webrtc.reachuc.com',
