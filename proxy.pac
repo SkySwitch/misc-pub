@@ -9,6 +9,15 @@ function FindProxyForURL(url, host)
 	var proxy = "PROXY 18.207.91.110:3128;";
 	var resolved_host = dnsResolve(host);
 
+	host_overrides = [
+		'webrtc.reachuc.com'
+		// "*.cpe.mixnetworks.net"
+	];
+	
+	//Return direct for literal hosts and wildcards
+	for(var i=0; i < host_overrides.length; i++) {
+		if ( shExpMatch(host, host_overrides[i]) ) { return 'DIRECT'; }
+	}
 
 	/* Proxy By Domain */
 	domains_to_proxy = [
@@ -23,7 +32,7 @@ function FindProxyForURL(url, host)
 		'iconectiv.com',
 		'app.sendgrid.com'
         ];
-
+	
 	for (i = 0; i < domains_to_proxy.length; i++) {
 		if (dnsDomainIsOrUnder(host, domains_to_proxy[i])) { return proxy; }
   	}
@@ -41,20 +50,6 @@ function FindProxyForURL(url, host)
 	for (i = 0; i < ips_to_proxy.length; i++) {
 		if (isInNet(resolved_host, ips_to_proxy[i][0], ips_to_proxy[i][1])) { return proxy; }
 		//if ( shExpMatch(resolved_host, ips_to_proxy[i][0]) ) { return proxy; }
-	}
-
-
-	/* Proxy By Host */
-	// Here's a list of hosts to connect via the PROXY server
-	var proxylist = [
-		"*.cpe.mixnetworks.net",
-		"cdr-processor.mixnetworks.com",
-		"util.mixnetworks.com"
-	];
-	
-	//Return our proxy name for matched domains/hosts
-	for(var i=0; i < proxylist.length; i++) {
-		if ( shExpMatch(host, proxylist[i]) ) { return proxy; }
 	}
 	
 	return 'DIRECT';
