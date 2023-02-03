@@ -35,7 +35,8 @@ function FindProxyForURL(url, host)
 		'instant-fax.com',
 		'iconectiv.com',
 		'app.sendgrid.com',
-		'api.graphql.console.sendgrid.net'
+		'api.graphql.console.sendgrid.net',
+		'newrelic.com'
         ];
 	
 	for (i = 0; i < domains_to_proxy.length; i++) {
